@@ -1,2 +1,3 @@
 class AreaOfStudy < ApplicationRecord
+  
 end
