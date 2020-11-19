@@ -8,8 +8,7 @@ Faculty.destroy_all
 
 5.times do
 Department.create(fake_name: Faker::Job.field, real_name: Faker::Movies::HarryPotter.spell, 
-                  fake_description: "boring mundane description",real_description: "magic-y description",
-                  fake_image: Faker::Placeholdit.image(size: '50x50'), real_image: Faker::Placeholdit.image(size: '50x50'))
+                  fake_description: "boring mundane description",real_description: "magic-y description")
 end
 
 
@@ -18,7 +17,15 @@ end
 
   AreaOfStudy.create(fake_name: Faker::Job.field, real_name: Faker::Movies::HarryPotter.spell, 
                     fake_description: "boring mundane description",real_description: "magic-y description",
-                    fake_image: Faker::Placeholdit.image(size: '50x50'), real_image: Faker::Placeholdit.image(size: '50x50'),
                     department_id: randDept)
 
 end
+
+20.times do
+
+  randArea = rand((AreaOfStudy.first.id)..(AreaOfStudy.last.id))
+
+  Faculty.create(name: Faker::Movies::PrincessBride.character, 
+                fake_bio: Faker::Movies::Departed.quote, real_bio: Faker::Movies::PrincessBride.quote, area_of_study_id: randArea)
+end
+
