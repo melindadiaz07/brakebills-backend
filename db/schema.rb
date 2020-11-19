@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_18_014223) do
+ActiveRecord::Schema.define(version: 2020_11_18_004206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_014223) do
     t.bigint "department_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "fake_image"
-    t.string "real_image"
     t.index ["department_id"], name: "index_area_of_studies_on_department_id"
   end
 
@@ -35,8 +33,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_014223) do
     t.string "real_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "fake_image"
-    t.string "real_image"
   end
 
   create_table "faculties", force: :cascade do |t|
@@ -46,7 +42,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_014223) do
     t.bigint "area_of_study_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "image"
     t.index ["area_of_study_id"], name: "index_faculties_on_area_of_study_id"
   end
 
