@@ -35,14 +35,14 @@ end
   User.create(username: Faker::Internet.email, password: "password", first: Faker::Name.first_name, last:Faker::Games::DnD.monster, admin?: false)
 end
 
-3.times do 
+10.times do 
   randUser = rand((User.first.id)..(User.last.id))
 
   Post.create(title: Faker::Movies::Hobbit.location, content: Faker::Movies::Hobbit.quote, category: Faker::Job.field, user_id: randUser)
 
 end
 
-7.times do 
+20.times do 
   randPost = rand((Post.first.id)..(Post.last.id))
 
   Reply.create(replier: Faker::Internet.email, content: Faker::TvShows::RickAndMorty.quote, post_id: randPost)

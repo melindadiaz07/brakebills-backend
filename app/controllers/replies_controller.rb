@@ -2,7 +2,7 @@ class RepliesController < ApplicationController
   
   def index 
     @replies = Reply.all 
-    render json: @reply
+    render json: @replies
   end
 
 end
