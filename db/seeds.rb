@@ -66,7 +66,7 @@ natural = Department.create(fake_name: "Natural Sciences", real_name: "Natural M
 
 
 
-  circum = AreaOfStudy.create(fake_name: "Physics", real_name: "Circumstantial Prognostication", 
+circum = AreaOfStudy.create(fake_name: "Physics", real_name: "Circumstantial Prognostication", 
                     fake_description: "Physics is the study of the natural world. It deals with the fundamental particles of 
                     which the universe is made, and the interactions between those particles, the objects composed of them 
                     (nuclei, atoms, molecules, etc) and energy. Physics is the science of Nature - of matter and energy in space and time.",
@@ -93,6 +93,35 @@ battle = AreaOfStudy.create(fake_name: "Geometry", real_name: "Battle Magic",
                     real_description: "Battle Magic, also known as War Magic and Unauthorized Magic, is the discipline of magic comprised of offensive and defensive spells, the 
                     study of magical warfare tactics, and the creation and buffing of magical weapons.",
                     department: physical)
+
+
+ astral = AreaOfStudy.create(fake_name: "Elementary Education", real_name: "Astral Projection", 
+                    fake_description: "Students who enroll in the Elementary Education (BA) must complete a broad range of coursework that includes: coursework in literature, the arts, 
+                    health, history, social sciences, biological sciences, and physical sciences.",
+                    real_description: "The art of Astral Projection allows the practitioner to separate his mind from his physical form to enter the Astral Plane.",
+                    department: psychic)
+
+
+ divination = AreaOfStudy.create(fake_name: "Secondary Education", real_name: "Divination", 
+                    fake_description: "The Secondary Education program is designed for students with an interest in education 
+                    policy, urban education, curriculum and instruction, teaching, early childhood education and international education.",
+                    real_description: "The Art of Divination studies the methods of divining the future, or gathering insights into future events, through various rituals and tools.",
+                    department: psychic)
+
+
+traveling = AreaOfStudy.create(fake_name: "Education Policy and Leadership", real_name: "Traveling", 
+                    fake_description: "With a degree in Education Policy and Leadership, you will gain the knowledge and skills 
+                    in policy, leadership, law, economics, and research necessary to transform schools and systems for the greater good.",
+                    real_description: "Travelers are Magicians who possess the natural ability to move between worlds throughout the Multiverse.
+                      They are able to modify the way they travel through spells that they tattoo on themselves such as to only travel the mind, 
+                      or to bring others with them.",
+                    department: psychic)
+
+
+
+
+
+
                     
 
 
