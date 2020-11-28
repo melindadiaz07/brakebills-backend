@@ -118,7 +118,19 @@ traveling = AreaOfStudy.create(fake_name: "Education Policy and Leadership", rea
                     department: psychic)
 
 
+ vanishing = AreaOfStudy.create(fake_name: "Anthropology", real_name: "Vanishing", 
+                    fake_description: "Anthropology is the scientific study of humanity, concerned with human behavior, human biology, 
+                    and societies, in both the present and past, including past human species. Social anthropology studies patterns of 
+                    behaviour, while cultural anthropology studies cultural meaning, including norms and values.",
+                    real_description: "This subset of Illusion work involves several forms of vanishing. Cloaking teaches students how to take elements of your environment (grass, leaves, stones) 
+                    and glamoring them to mask your image. Invisibility is a major arcanum. This involves scrubbing your image out of existence and can take years to accomplish fully.",
+                    department: illusions)
 
+
+mirror = AreaOfStudy.create(fake_name: "", real_name: "", 
+                    fake_description: "",
+                    real_description: "",
+                    department: illusions)
 
 
 
