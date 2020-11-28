@@ -118,7 +118,7 @@ traveling = AreaOfStudy.create(fake_name: "Education Policy and Leadership", rea
                     department: psychic)
 
 
- vanishing = AreaOfStudy.create(fake_name: "Anthropology", real_name: "Vanishing", 
+vanishing = AreaOfStudy.create(fake_name: "Anthropology", real_name: "Vanishing", 
                     fake_description: "Anthropology is the scientific study of humanity, concerned with human behavior, human biology, 
                     and societies, in both the present and past, including past human species. Social anthropology studies patterns of 
                     behaviour, while cultural anthropology studies cultural meaning, including norms and values.",
@@ -127,30 +127,63 @@ traveling = AreaOfStudy.create(fake_name: "Education Policy and Leadership", rea
                     department: illusions)
 
 
-mirror = AreaOfStudy.create(fake_name: "", real_name: "", 
-                    fake_description: "",
-                    real_description: "",
+mirror = AreaOfStudy.create(fake_name: "Sociology", real_name: "Mirror Magic", 
+                    fake_description: "Sociology is the study of social life, social change, and the social causes and consequences of human behavior. Sociologists investigate the structure of groups, 
+                    organizations, and societies and how people interact within these contexts.",
+                    real_description: "The Mirror Realm is a dark reflection of the Material World. In it, everything is the opposite of the world in the state you enter in. Mirror Bridges were 
+                    invented by Magicians to avoid having to travel through the Mirror Realm due to the dangerous nature of the dimension.",
                     department: illusions)
 
 
+        
+ projection = AreaOfStudy.create(fake_name: "Political Science", real_name: "Projection", 
+                    fake_description: "Political science is the study of politics and power from domestic, international, and comparative perspectives. It entails understanding political 
+                    ideas, ideologies, institutions, policies, processes, and behavior, as well as groups, classes, government, diplomacy, law, strategy, and war.",
+                    real_description: "Projection is an illusion executed around an area to make it look like another place.",
+                    department: illusions)
 
+
+  med = AreaOfStudy.create(fake_name: "Pre-Med", real_name: "Healing", 
+                    fake_description: "Pre-medical studies is the course of study you take to prepare for admission to medical school. Not a major, per se, pre-med is rather a guiding 
+                    principle for your education designed to increase your chances for admission to one of this country's 144 medical schools.",
+                    real_description: "Healing is magical medicine, distinguished by its capacity to magically improve the physical condition of the living subject. As with all forms of medicine, it is incredibly complex due to the range of possible afflictions that magic offers. 
+                    According to Dr Meers and Henry Fogg, the art of healing also involves the soul, any wrong step may alter it. As Healing encompasses the improvement of a living subject, it refers to all creatures, including magical ones. Centaurs are well-respected Healers, due to their unique approach to magic.",
+                    department: healing)
+
+
+theory = AreaOfStudy.create(fake_name: "Philosophy", real_name: "Magical Theory", 
+                    fake_description: "Philosophy—etymologically, the 'love of wisdom'—is generally the study of problems concerning matters such as existence, knowledge, justification, truth, justice, right and wrong, beauty, validity, mind, and language. Philosophy is distinguished from other ways of addressing these issues by 
+                    its critical, generally systematic approach and its reliance on reasoned argument, rather than experiments.",
+                    real_description: "Magical theory students are encouraged to explore meta-composition - the understanding of the theories behind spells and the ability to reshape them.",
+                    department: knowledge)
+
+
+historymagic = AreaOfStudy.create(fake_name: "Religion and Theology", real_name: "History of Magic", 
+                    fake_description: "Religious studies, also known as the study of religion, is an academic field devoted to research into religious beliefs, behaviors, and institutions. It describes, compares, interprets, and explains religion, emphasizing systematic, historically based, and cross-cultural perspectives.
+                    While theology attempts to understand the nature of transcendent or supernatural forces (such as deities), religious studies tries to study religious behavior and belief from outside any particular religious viewpoint. Religious studies draws upon multiple disciplines and their methodologies including 
+                    anthropology, sociology, psychology, philosophy, and history of religion.",
+                    real_description: "Great mages have wasted their lives trying to get at the root of magic. It is a futile pursuit, not much fun and occasionally quite hazardous. Because the further down you go, the bigger and scalier the turtles get, with sharper and sharper beaks. Until eventually they start looking less 
+                    like turtles and more like dragons.",
+                    department: knowledge)
+
+
+botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany", 
+                    fake_description: "Biology is the natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution.",
+                    real_description: "The study of magical plants and fungi. Natural students are known to maintain and groom the grounds of Brakebills.",
+                    department: natural)               
                     
 
 
-
-  randArea = rand((AreaOfStudy.first.id)..(AreaOfStudy.last.id))
-
-
-  Faculty.create(name: "Henry Fogg", fake_bio: "Dean", real_bio: "Dean", area_of_study_id: randArea)
+  Faculty.create(name: "Henry Fogg", fake_bio: "Dean", real_bio: "Dean")
 
   Faculty.create(name: "Hamish bax", fake_bio: "Head of Biology Department", 
-  real_bio: "Bax is able to shape and manipulate the energy of the Wellspring to cast spells by writing specific formations with his hands, forming phosphorescent constructs of energy.", area_of_study_id: randArea)
+  real_bio: "Bax is able to shape and manipulate the energy of the Wellspring to cast spells by writing specific formations with his hands, forming phosphorescent constructs of energy.", area_of_study: botany)
   
-  Faculty.create(name: "Helen Myrin", fake_bio: "Professor of biology and zoology", real_bio: "Professor of cryptozoology. Specialty in lycanthropy.", area_of_study_id: randArea)
+  Faculty.create(name: "Helen Myrin", fake_bio: "Professor of Biology and Zoology", real_bio: "Professor of cryptozoology. Specialty in lycanthropy.", area_of_study: botany)
   
-  Faculty.create(name: "Eleanor Lipson", fake_bio: "Head of Medical Department", real_bio: "Head of Healing Department", area_of_study_id: randArea)
+  Faculty.create(name: "Eleanor Lipson", fake_bio: "Head of Medical Department", real_bio: "Head of Healing Department", area_of_study: med)
   
-  Faculty.create(name: "Pearl Sunderland", fake_bio: "Head of Student Affairs.", real_bio: "Ph.D. in Hauntings. Head of student Specialty Determination.", area_of_study_id: randArea)
+  Faculty.create(name: "Pearl Sunderland", fake_bio: "Head of Student Affairs.", real_bio: "Ph.D. in Hauntings. Head of student Specialty Determination.", area_of_study: theory)
 
 
 5.times do 
