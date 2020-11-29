@@ -2,7 +2,12 @@ class UsersController < ApplicationController
 
   def index 
     @users = User.all
-    render json: @users
+    render json: @users.to_json
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render json: @user
   end
 
 
@@ -11,7 +16,7 @@ class UsersController < ApplicationController
                         first: params[:first], last: params[:last],
                         password: Faker::Movies::HarryPotter.spell)
           
-    render json: @user
+    render json: @user.to_json
   end
 
 end

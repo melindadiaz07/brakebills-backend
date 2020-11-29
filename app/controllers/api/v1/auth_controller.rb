@@ -10,13 +10,12 @@ class Api::V1::AuthController < ApplicationController
           message: "login success",
           token: token,
           user: @user,
-          courses: @user.courses
-        }, status: :accepted
+      }, status: :accepted
       else
           render json: {
           authenticated: false,
           message: "login failed"
-        }, status: :unauthorized 
+      }, status: :unauthorized 
       end
     end
 

@@ -2,7 +2,7 @@ class DepartmentsController < ApplicationController
   
   def index
     @departments = Department.all
-   render json: @departments
+   render json: @departments.to_json(include: :area_of_studies)
   end
 
   # def show

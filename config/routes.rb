@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
 
+  
   namespace :api do
     namespace :v1 do
       post "/signup", to: "users#create"
       post '/login', to: 'auth#create'
+      get '/profile', to: 'users#show'
     end
   end
 end

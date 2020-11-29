@@ -174,7 +174,7 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
                     
 
 
-  Faculty.create(name: "Henry Fogg", fake_bio: "Dean", real_bio: "Dean")
+  Faculty.create(name: "Henry Fogg", fake_bio: "Dean", real_bio: "Dean", area_of_study: horomancy )
 
   Faculty.create(name: "Hamish bax", fake_bio: "Head of Biology Department", 
   real_bio: "Bax is able to shape and manipulate the energy of the Wellspring to cast spells by writing specific formations with his hands, forming phosphorescent constructs of energy.", area_of_study: botany)
