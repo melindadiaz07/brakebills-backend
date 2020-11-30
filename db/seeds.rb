@@ -174,32 +174,85 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
                     
 
 
-  Faculty.create(name: "Henry Fogg", fake_bio: "Dean", real_bio: "Dean", area_of_study: horomancy )
+  Faculty.create(name: "Henry Fogg", fake_bio: "As Dean of Brakebills since 2007, Fogg has advanced the university’s commitment to excellence in teaching, research, 
+  and public service and fostered collaboration across the university’s six schools. Under his leadership, Brakebills has pursued initiatives to enhance the undergraduate experience, 
+  deepen graduate and professional education and research in critical fields, broaden international engagement, and promote active citizenship among members of the university community.", 
+  real_bio: "Henry Fogg has always been self-sufficient - so much so that he effectively taught himself to perform magic at the age of four. In his later years, he attended Brakebills, where 
+  he was sorted into the Knowledge discipline. Upon completing his studies, Fogg became an Alumni, receiving a key should he ever wish to visit the school's campus. However, afterward, Fogg was 
+  approached for the possibility of becoming the school's Dean, to which he accepted.", 
+  area_of_study: horomancy )
 
-  Faculty.create(name: "Hamish bax", fake_bio: "Head of Biology Department", 
-  real_bio: "Bax is able to shape and manipulate the energy of the Wellspring to cast spells by writing specific formations with his hands, forming phosphorescent constructs of energy.", area_of_study: botany)
+  Faculty.create(name: "Hamish Bax", fake_bio: "Professor Hamish Bax is the new department chair for Botany Bay at Brakebills University.", 
+  real_bio: "Professor Hamish Bax is the new department chair for Botany Bay at Brakebills University. Bax maintains a variation of a Scottish primrose flower in honor of his late wife, Isobel, whom he named the flower after.", 
+  area_of_study: botany)
   
-  Faculty.create(name: "Helen Myrin", fake_bio: "Professor of Biology and Zoology", real_bio: "Professor of cryptozoology. Specialty in lycanthropy.", area_of_study: botany)
+  Faculty.create(name: "Helen Myrin", fake_bio: "Professor of Biology and Zoology", 
+  real_bio: "Helen is the Cryptozoology professor at Brakebills University, with a world-renowned specialty in lycanthropy.", 
+  area_of_study: botany)
   
-  Faculty.create(name: "Eleanor Lipson", fake_bio: "Head of Medical Department", real_bio: "Head of Healing Department", area_of_study: med)
+  Faculty.create(name: "Eleanor Lipson", 
+  fake_bio: "Head of Medical Department", 
+  real_bio: "Lipson leads the Healers in the school's infirmary, and is typically seen looking over special cases. As head of the Healers, Lipson holds a vast 
+  index on magical symptoms and illnesses, akin to that of a physician.", area_of_study: med)
   
-  Faculty.create(name: "Pearl Sunderland", fake_bio: "Head of Student Affairs.", real_bio: "Ph.D. in Hauntings. Head of student Specialty Determination.", area_of_study: theory)
+  Faculty.create(name: "Pearl Sunderland", 
+  fake_bio: "Head of Student Affairs.", 
+  real_bio: "As a respected member of the Brakebills University faculty, Sunderland has the knowledge and skill of a formidable magician, accumulating over 
+  the years to grant her the power of a Master Magician. As such, she retains great insight to the magical mishaps of students and is an examiner 
+  during the tests to assess first-year students' Disciplines. Sunderland has a Ph.D. in Hauntings, possessing great insight to the happenings of ghosts and the phenomenon surrounding them. ", 
+  area_of_study: theory)
 
 
-5.times do 
 
-  User.create(username: Faker::Internet.email, password: "password", first: Faker::Name.first_name, last:Faker::Games::DnD.monster, admin?: false)
-end
+  quentin = User.create(username: "quentin.coldwater@brakebills.edu", password: "password", first: "Quentin", last: "Coldwater", admin?: false)
+  penny = User.create(username: "penny.adiyodi@brakebills.edu", password: "password", first: "Penny", last: "Adiyodi", admin?: false)
+  alice = User.create(username: "alice.quinn@brakebills.edu", password: "magic", first: "Alice", last: "Quinn", admin?: false)
+  kady = User.create(username: "kady.diaz@brakebills.edu", password: "password", first: "Kady", last: "Diaz", admin?: false)
+  margo = User.create(username: "margo.hanson@brakebills.edu", password: "password", first: "Margo", last: "Hanson", admin?: false)
+  elliot = User.create(username: "elliot.waugh@brakebills.edu", password: "password", first: "Elliot", last: "Waugh", admin?: false)
+  julia = User.create(username: "julia.wicker@brakebills.edu", password: "password", first: "Julia", last: "Wicker", admin?: false)
+  todd = User.create(username: "elliot.todd@brakebills.edu", password: "password", first: "Todd", last: "Todd", admin?: false)
+  marina = User.create(username: "marina.andrieski@brakebills.edu", password: "password", first: "Marina", last: "Andrieski", admin?: false)
+  mike = User.create(username: "mike.mckormick@brakebills.edu", password: "password", first: "Mike", last: "McKormick", admin?: false)
+  poppy = User.create(username: "poppy.kline@brakebills.edu", password: "password", first: "Poppy", last: "Kline", admin?: false)
+  josh = User.create(username: "josh.hoberman@brakebills.edu", password: "password", first: "Josh", last: "Hoberman", admin?: false)
 
-10.times do 
-  randUser = rand((User.first.id)..(User.last.id))
 
-  Post.create(title: Faker::Movies::Hobbit.location, content: Faker::Movies::Hobbit.quote, category: Faker::Job.field, user_id: randUser)
 
-end
 
-20.times do 
-  randPost = rand((Post.first.id)..(Post.last.id))
+  post1 = Post.create(title: "Fillory Collector's Edition", content: "I'm not saying it was stolen...but a copy of a Collector's Edition Fillory and Further 
+    book 4 by Christopher Plover has gone missing from my locked dorm room. If you have any information please contact me - Quentin Coldwater - at the Physical Kid's cottage.", 
+    category: "Lost and Found", user: quentin)
 
-  Reply.create(replier: Faker::Internet.email, content: Faker::TvShows::RickAndMorty.quote, post_id: randPost)
-end
+  post2 = Post.create(title: "Brooklyn Bridge dragon", content: "A few of us will be going to Manhatten this weekend to look for the Brooklyn Bridge dragon. If you want to join, meet us at the 
+  library at 5 on saturday - we'll be creating a temporary mirror bridge. You'll need to bring baby teeth.", 
+    category: "Misc", user: poppy)
+
+  post3 = Post.create(title: "Lycanthropy outbreak", content: "Just wanted to let everyone know, there's been talk that someone at a party last saturday at the Physical kids cottage
+    had lycanthropy. If you're feeling wierd, maybe get tested...", 
+      category: "Warnings", user: josh)
+
+      post4 = Post.create(title: "Fillory Collector's Edition", content: "I'm not saying it was stolen...but a copy of a Collector's Edition Fillory and Further 
+      book 4 by Christopher Plover has gone missing from my locked dorm room. If you have any information please contact me - Quentin Coldwater - at the Physical Kid's cottage.", 
+      category: "Lost and Found", user: quentin)
+  
+    post5 = Post.create(title: "Brooklyn Bridge dragon", content: "A few of us will be going to Manhatten this weekend to look for the Brooklyn Bridge dragon. If you want to join, meet us at the 
+    library at 5 on saturday - we'll be creating a temporary mirror bridge. You'll need to bring baby teeth.", 
+      category: "Misc", user: poppy)
+  
+    post6 = Post.create(title: "Lycanthropy outbreak", content: "Just wanted to let everyone know, there's been talk that someone at a party last saturday at the Physical kids cottage
+      had lycanthropy. If you're feeling wierd, maybe get tested...", 
+        category: "Warnings", user: josh)
+
+
+  Reply.create(replier: "penny.adiyodi@brakebills.edu", content: "Nobody cares about your stupid kids' book, quentin", post: post1)
+
+  Reply.create(replier: "elliot.todd@brakebills.edu", content: "my own baby teeth, or just any?", post: post2)
+  Reply.create(replier: "alice.quinn@brakebills.edu" , content: "I thought mirror bridges were off-limits on campus...", post: post2)
+  Reply.create(replier: "poppy.kline@brakebills.edu" , content: "any human baby teeth will do, todd.", post: post2)
+  Reply.create(replier: "poppy.kline@brakebills.edu" , content: "any human baby teeth will do, todd.", post: post2) 
+  Reply.create(replier: "elliot.waugh@brakebills.edu", content: "baby teeth?! gross. This is why I stay away from dragons.", post: post2) 
+
+  Reply.create(replier: "margo.hanson@brakebills.edu", content: "sure, josh, 'someone...'", post: post3)
+
+    
