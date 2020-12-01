@@ -174,7 +174,7 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
                     
 
 
-  Faculty.create(name: "Henry Fogg", fake_bio: "As Dean of Brakebills since 2007, Fogg has advanced the university’s commitment to excellence in teaching, research, 
+  Faculty.create(name: "Dean Henry Fogg", fake_bio: "As Dean of Brakebills since 2007, Fogg has advanced the university’s commitment to excellence in teaching, research, 
   and public service and fostered collaboration across the university’s six schools. Under his leadership, Brakebills has pursued initiatives to enhance the undergraduate experience, 
   deepen graduate and professional education and research in critical fields, broaden international engagement, and promote active citizenship among members of the university community.", 
   real_bio: "Henry Fogg has always been self-sufficient - so much so that he effectively taught himself to perform magic at the age of four. In his later years, he attended Brakebills, where 
@@ -182,24 +182,34 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
   approached for the possibility of becoming the school's Dean, to which he accepted.", 
   area_of_study: horomancy )
 
-  Faculty.create(name: "Hamish Bax", fake_bio: "Professor Hamish Bax is the new department chair for Botany Bay at Brakebills University.", 
+  Faculty.create(name: "Hamish Bax", fake_bio: "Professor Hamish Bax is the new department chair for Botany Bay at Brakebills University. Professor Bax teaches classes in botany, horticulture and mycology.", 
   real_bio: "Professor Hamish Bax is the new department chair for Botany Bay at Brakebills University. Bax maintains a variation of a Scottish primrose flower in honor of his late wife, Isobel, whom he named the flower after.", 
   area_of_study: botany)
   
-  Faculty.create(name: "Helen Myrin", fake_bio: "Professor of Biology and Zoology", 
-  real_bio: "Helen is the Cryptozoology professor at Brakebills University, with a world-renowned specialty in lycanthropy.", 
+  Faculty.create(name: "Helen Myrin", fake_bio: "Professor Myren teaches courses in Biology and Zoology. Her current research involves phylogenetic relationships at the species level within two major clades, the Australasian marsupial order Dasyuromorphia and the avian superfamily Gruoidea.", 
+  real_bio: "Helen is the Cryptozoology professor at Brakebills University, with a world-renowned specialty in lycanthropy. After graduating from Brakebills in 2002, she traveled throughout Eastern Europe
+  collecting samples from the 13 known subspecies of lycanthropes and published numerous papers on her findings.", 
   area_of_study: botany)
   
   Faculty.create(name: "Eleanor Lipson", 
-  fake_bio: "Head of Medical Department", 
+  fake_bio: "Dr. Lipson is the Head of Medical Department. With more than 140 published articles and chapters, Dr. Lipson is an expert in balance and inner ear disorders. Through neurophysiological investigations of 
+  eye movements and neuronal pathways, his work has identified adaptive mechanisms responsible for compensation to vestibular injury in a model system for studies of motor learning (the vestibulo-ocular reflex).", 
   real_bio: "Lipson leads the Healers in the school's infirmary, and is typically seen looking over special cases. As head of the Healers, Lipson holds a vast 
   index on magical symptoms and illnesses, akin to that of a physician.", area_of_study: med)
   
   Faculty.create(name: "Pearl Sunderland", 
-  fake_bio: "Head of Student Affairs.", 
+  fake_bio: "As Head of Student Affairs, professor Sunderland is responsible for managing, directing, and working with his team in implementing engaging programs and events in an effort to create an impactful and positive 
+  living-learning experience for students living on campus and create communities where students belong and matter.", 
   real_bio: "As a respected member of the Brakebills University faculty, Sunderland has the knowledge and skill of a formidable magician, accumulating over 
   the years to grant her the power of a Master Magician. As such, she retains great insight to the magical mishaps of students and is an examiner 
   during the tests to assess first-year students' Disciplines. Sunderland has a Ph.D. in Hauntings, possessing great insight to the happenings of ghosts and the phenomenon surrounding them. ", 
+  area_of_study: theory)
+
+  Faculty.create(name: "Mischa Mayakovsky", 
+  fake_bio: "As the Director of Student affairs at Brakebills South, Dr. Mayakovsky is responsible for all research activities currently being undertaken at Brakebill's 
+  satellite campus in Antarctica.", 
+  real_bio: "Like his father before him, Mischa Mayakovsky is a renowned Master Magician, possessing the skills, mastery, and understanding of magic that are virtually unrivaled. 
+  As such, his magical capability and litany of spellcraft are sufficient enough to allow him to perform great feats with singular gestures. ", 
   area_of_study: theory)
 
 
@@ -211,7 +221,7 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
   margo = User.create(username: "margo.hanson@brakebills.edu", password: "password", first: "Margo", last: "Hanson", admin?: false)
   elliot = User.create(username: "elliot.waugh@brakebills.edu", password: "password", first: "Elliot", last: "Waugh", admin?: false)
   julia = User.create(username: "julia.wicker@brakebills.edu", password: "password", first: "Julia", last: "Wicker", admin?: false)
-  todd = User.create(username: "elliot.todd@brakebills.edu", password: "password", first: "Todd", last: "Todd", admin?: false)
+  todd = User.create(username: "todd.elliot@brakebills.edu", password: "password", first: "Todd", last: "Todd", admin?: false)
   marina = User.create(username: "marina.andrieski@brakebills.edu", password: "password", first: "Marina", last: "Andrieski", admin?: false)
   mike = User.create(username: "mike.mckormick@brakebills.edu", password: "password", first: "Mike", last: "McKormick", admin?: false)
   poppy = User.create(username: "poppy.kline@brakebills.edu", password: "password", first: "Poppy", last: "Kline", admin?: false)
@@ -224,25 +234,28 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
     book 4 by Christopher Plover has gone missing from my locked dorm room. If you have any information please contact me - Quentin Coldwater - at the Physical Kid's cottage.", 
     category: "Lost and Found", user: quentin)
 
+    post4 = Post.create(title: "Possible lycanthropy outbreak", content: "Just wanted to let everyone know, there's been talk that someone at a party last saturday at the Physical kids cottage
+    had lycanthropy. If you're feeling wierd, maybe get tested...", 
+      category: "Warnings", user: josh)
+
   post2 = Post.create(title: "Brooklyn Bridge dragon", content: "A few of us will be going to Manhatten this weekend to look for the Brooklyn Bridge dragon. If you want to join, meet us at the 
   library at 5 on saturday - we'll be creating a temporary mirror bridge. You'll need to bring baby teeth.", 
     category: "Misc", user: poppy)
 
-  post3 = Post.create(title: "Lycanthropy outbreak", content: "Just wanted to let everyone know, there's been talk that someone at a party last saturday at the Physical kids cottage
-    had lycanthropy. If you're feeling wierd, maybe get tested...", 
-      category: "Warnings", user: josh)
+  post3 = Post.create(title: "Summer Intern", content: "My company, a startup in Manhatten, is looking for a summer intern. Juniors and Seniors only, please. You'll need to be able
+  to proficiently perform security enchantments. Could potentially lead to a full time job after graduation - that's how I got hired on 2 years ago.", 
+      category: "Jobs", user: mike)
 
-      post4 = Post.create(title: "Fillory Collector's Edition", content: "I'm not saying it was stolen...but a copy of a Collector's Edition Fillory and Further 
-      book 4 by Christopher Plover has gone missing from my locked dorm room. If you have any information please contact me - Quentin Coldwater - at the Physical Kid's cottage.", 
-      category: "Lost and Found", user: quentin)
-  
-    post5 = Post.create(title: "Brooklyn Bridge dragon", content: "A few of us will be going to Manhatten this weekend to look for the Brooklyn Bridge dragon. If you want to join, meet us at the 
-    library at 5 on saturday - we'll be creating a temporary mirror bridge. You'll need to bring baby teeth.", 
-      category: "Misc", user: poppy)
-  
-    post6 = Post.create(title: "Lycanthropy outbreak", content: "Just wanted to let everyone know, there's been talk that someone at a party last saturday at the Physical kids cottage
-      had lycanthropy. If you're feeling wierd, maybe get tested...", 
-        category: "Warnings", user: josh)
+
+
+post5 = Post.create(title: "Important Notebook...", content: "hey everyone...so I've been taking notes for the Dean's autobiography (he dicates it to me for about 2 hours every afternoon), and I seem to have 
+misplaced it at some point. Has been missing since tuesday. Maybe monday? If you find a black notebooke with a bunch of personal stuff about the Dean in it PLEASE return it to me...
+I cannot sit through all those stories again.", 
+        category: "Lost and Found", user: todd)
+
+post6 = Post.create(title: "Full moon", content: "hey again, everyone...just wanted to remind everybody it's a full moon this thursday. I know it makes for good circumstances for a lot of 
+spellwork, but, yknow...safety first.", 
+          category: "Warnings", user: josh)
 
 
   Reply.create(replier: "penny.adiyodi@brakebills.edu", content: "Nobody cares about your stupid kids' book, quentin", post: post1)
@@ -253,6 +266,13 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
   Reply.create(replier: "poppy.kline@brakebills.edu" , content: "any human baby teeth will do, todd.", post: post2) 
   Reply.create(replier: "elliot.waugh@brakebills.edu", content: "baby teeth?! gross. This is why I stay away from dragons.", post: post2) 
 
-  Reply.create(replier: "margo.hanson@brakebills.edu", content: "sure, josh, 'someone...'", post: post3)
+  Reply.create(replier: "margo.hanson@brakebills.edu", content: "sure, josh, 'someone...'", post: post4)
 
-    
+  Reply.create(replier: "elliot.waugh@brakebills.edu", content: "will I get to work closely with you every day? ;)", post: post3)  
+
+  Reply.create(replier: "elliot.waugh@brakebills.edu", content: "you know the dean fogg can see messages on this board, right?", post: post5)
+  Reply.create(replier: "margo.hanson@brakebills.edu", content: "classic Todd.", post: post5)
+  Reply.create(replier: "todd.elliot@brakebills.edu", content: "crap...", post: post5)
+  Reply.create(replier: "todd.elliot@brakebills.edu", content: "how do you delete a post on this thing??", post: post5)
+
+
