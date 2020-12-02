@@ -271,7 +271,7 @@ spellwork, but, yknow...safety first.",
 
   Reply.create(replier: "elliot.waugh@brakebills.edu", content: "will I get to work closely with you every day? ;)", post: post3)  
 
-  Reply.create(replier: "elliot.waugh@brakebills.edu", content: "you know the dean fogg can see messages on this board, right?", post: post5)
+  Reply.create(replier: "elliot.waugh@brakebills.edu", content: "you know fogg can see messages on this board, right?", post: post5)
   Reply.create(replier: "margo.hanson@brakebills.edu", content: "classic Todd.", post: post5)
   Reply.create(replier: "todd.elliot@brakebills.edu", content: "crap...", post: post5)
   Reply.create(replier: "todd.elliot@brakebills.edu", content: "how do you delete a post on this thing??", post: post5)
