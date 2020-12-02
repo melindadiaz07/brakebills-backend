@@ -226,6 +226,7 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
   mike = User.create(username: "mike.mckormick@brakebills.edu", password: "password", first: "Mike", last: "McKormick", admin?: false)
   poppy = User.create(username: "poppy.kline@brakebills.edu", password: "password", first: "Poppy", last: "Kline", admin?: false)
   josh = User.create(username: "josh.hoberman@brakebills.edu", password: "password", first: "Josh", last: "Hoberman", admin?: false)
+  fogg = User.create(username: "henry.fogg@brakebills.edu", password: "password", first: "Henry", last: "Fogg", admin?: true)
 
 
 

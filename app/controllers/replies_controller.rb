@@ -11,4 +11,10 @@ class RepliesController < ApplicationController
     render json: @reply
   end
 
+  def destroy
+    @reply = Reply.find(params[:id])
+    @reply.destroy
+    render json: Reply.all.to_json
+  end
+
 end
