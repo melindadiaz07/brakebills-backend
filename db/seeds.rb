@@ -182,6 +182,28 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
   approached for the possibility of becoming the school's Dean, to which he accepted.", 
   area_of_study: horomancy )
 
+  Faculty.create(name: "Pearl Sunderland", 
+  fake_bio: "As Head of Student Affairs, professor Sunderland is responsible for managing, directing, and working with his team in implementing engaging programs and events in an effort to create an impactful and positive 
+  living-learning experience for students living on campus and create communities where students belong and matter.", 
+  real_bio: "As a respected member of the Brakebills University faculty, Sunderland has the knowledge and skill of a formidable magician, accumulating over 
+  the years to grant her the power of a Master Magician. As such, she retains great insight to the magical mishaps of students and is an examiner 
+  during the tests to assess first-year students' Disciplines. Sunderland has a Ph.D. in Hauntings, possessing great insight to the happenings of ghosts and the phenomenon surrounding them. ", 
+  area_of_study: theory)
+
+  Faculty.create(name: "Eleanor Lipson", 
+  fake_bio: "Dr. Lipson is the Head of Medical Department. With more than 140 published articles and chapters, Dr. Lipson is an expert in balance and inner ear disorders. Through neurophysiological investigations of 
+  eye movements and neuronal pathways, his work has identified adaptive mechanisms responsible for compensation to vestibular injury in a model system for studies of motor learning (the vestibulo-ocular reflex).", 
+  real_bio: "Lipson leads the Healers in the school's infirmary, and is typically seen looking over special cases. As head of the Healers, Lipson holds a vast 
+  index on magical symptoms and illnesses, akin to that of a physician.", area_of_study: med)
+
+  Faculty.create(name: "Mischa Mayakovsky", 
+  fake_bio: "As the Director of Student affairs at Brakebills South, Dr. Mayakovsky is responsible for all research activities currently being undertaken at Brakebill's 
+  satellite campus in Antarctica.", 
+  real_bio: "Like his father before him, Mischa Mayakovsky is a renowned Master Magician, possessing the skills, mastery, and understanding of magic that are virtually unrivaled. 
+  As such, his magical capability and litany of spellcraft are sufficient enough to allow him to perform great feats with singular gestures. ", 
+  area_of_study: theory)
+
+
   Faculty.create(name: "Hamish Bax", fake_bio: "Professor Hamish Bax is the new department chair for Botany Bay at Brakebills University. Professor Bax teaches classes in botany, horticulture and mycology.", 
   real_bio: "Professor Hamish Bax is the new department chair for Botany Bay at Brakebills University. Bax maintains a variation of a Scottish primrose flower in honor of his late wife, Isobel, whom he named the flower after.", 
   area_of_study: botany)
@@ -191,26 +213,7 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
   collecting samples from the 13 known subspecies of lycanthropes and published numerous papers on her findings.", 
   area_of_study: botany)
   
-  Faculty.create(name: "Eleanor Lipson", 
-  fake_bio: "Dr. Lipson is the Head of Medical Department. With more than 140 published articles and chapters, Dr. Lipson is an expert in balance and inner ear disorders. Through neurophysiological investigations of 
-  eye movements and neuronal pathways, his work has identified adaptive mechanisms responsible for compensation to vestibular injury in a model system for studies of motor learning (the vestibulo-ocular reflex).", 
-  real_bio: "Lipson leads the Healers in the school's infirmary, and is typically seen looking over special cases. As head of the Healers, Lipson holds a vast 
-  index on magical symptoms and illnesses, akin to that of a physician.", area_of_study: med)
-  
-  Faculty.create(name: "Pearl Sunderland", 
-  fake_bio: "As Head of Student Affairs, professor Sunderland is responsible for managing, directing, and working with his team in implementing engaging programs and events in an effort to create an impactful and positive 
-  living-learning experience for students living on campus and create communities where students belong and matter.", 
-  real_bio: "As a respected member of the Brakebills University faculty, Sunderland has the knowledge and skill of a formidable magician, accumulating over 
-  the years to grant her the power of a Master Magician. As such, she retains great insight to the magical mishaps of students and is an examiner 
-  during the tests to assess first-year students' Disciplines. Sunderland has a Ph.D. in Hauntings, possessing great insight to the happenings of ghosts and the phenomenon surrounding them. ", 
-  area_of_study: theory)
 
-  Faculty.create(name: "Mischa Mayakovsky", 
-  fake_bio: "As the Director of Student affairs at Brakebills South, Dr. Mayakovsky is responsible for all research activities currently being undertaken at Brakebill's 
-  satellite campus in Antarctica.", 
-  real_bio: "Like his father before him, Mischa Mayakovsky is a renowned Master Magician, possessing the skills, mastery, and understanding of magic that are virtually unrivaled. 
-  As such, his magical capability and litany of spellcraft are sufficient enough to allow him to perform great feats with singular gestures. ", 
-  area_of_study: theory)
 
 
 
@@ -229,13 +232,30 @@ botany = AreaOfStudy.create(fake_name: "Biology", real_name: "Botany",
   fogg = User.create(username: "henry.fogg@brakebills.edu", password: "password", first: "Henry", last: "Fogg", admin?: true)
 
 
+  Post.create(title: "Spiked Coffee", content: "I think one of the seniors is using the campus coffee shop to test their thesis project potions on unwitting freshman. I just spent the entire afternoon
+  in the infirmary waiting for them to find a way to remove a tail I did NOT have before my morning coffee.", 
+  category: "Warnings", user: todd)
+
+
+  Post.create(title: "Welters Match", content: "Physical discipline team vs. Illusionists on Saturday. Come watch us kick their butts. Last year I made Troy cry, so look forward to that.", 
+  category: "Events", user: margo)
+
+  
+
+
+  Post.create(title: "Fountain", content: "Pretty sure I saw a zombie hand reach out of the commons fountain last night. Didn't stick around to see was attached to it, but everyone should probably avoid it at night for a while.", 
+  category: "Warnings", user: marina)
+
+  Post.create(title: "Don't go to the library", content: "Alice Has Gone Full Harry Potter Part Seven/Eight Over There", 
+  category: "Warnings", user: elliot)
+
 
 
   post1 = Post.create(title: "Fillory Collector's Edition", content: "I'm not saying it was stolen...but a copy of a Collector's Edition Fillory and Further 
     book 4 by Christopher Plover has gone missing from my locked dorm room. If you have any information please contact me - Quentin Coldwater - at the Physical Kid's cottage.", 
     category: "Lost and Found", user: quentin)
 
-    post4 = Post.create(title: "Possible lycanthropy outbreak", content: "Just wanted to let everyone know, there's been talk that someone at a party last saturday at the Physical kids cottage
+  post4 = Post.create(title: "Possible lycanthropy outbreak", content: "Just wanted to let everyone know, there's been talk that someone at a party last saturday at the Physical kids cottage
     had lycanthropy. If you're feeling wierd, maybe get tested...", 
       category: "Warnings", user: josh)
 
