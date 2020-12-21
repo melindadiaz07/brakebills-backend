@@ -1,5 +1,7 @@
 # README
 
+![demo](brakebillsReadmeDemo.gif)
+
 link to project's frontend repo:
 - https://github.com/melindadiaz07/brakebills-frontend
 
