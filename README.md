@@ -1,17 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+link to project's frontend repo:
+- https://github.com/melindadiaz07/brakebills-frontend
+
 
 Things you may want to cover:
 
 * Ruby version
+Rails 6.0.3.4
 
 * System dependencies
+
 
 * Configuration
 
 * Database creation
+SQLite
 
 * Database initialization
 
@@ -20,5 +24,6 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
+(to launch backend API/localhost - rails server):
+$ rails s
 * ...
